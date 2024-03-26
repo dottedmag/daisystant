@@ -86,6 +86,21 @@
     background-color: #ccc;
 }
 
+.toc-this-page {
+    max-width: 40em;
+    word-wrap: break-word;
+}
+
+.toc-other-page {
+    max-width: 40em;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.toc-other-page:hover {
+    background-color: #ccc;
+}
+
 del {
     background-color: red;
     color: white;

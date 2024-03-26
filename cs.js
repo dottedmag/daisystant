@@ -315,6 +315,9 @@ async function showDiff(thisPageID, otherPageID) {
     let diff = HtmlDiff.execute(otherText, thisText);
     uiDiffContent.innerHTML = diff;
     uiDiff.classList.add('open');
+    queueMicrotask(()=>{
+	uiDiff.scrollTo(0, 0);
+    });
 }
 
 function populateVersionsUI(courseInfo, thisVersion, otherVersion) {
@@ -346,16 +349,17 @@ function populateTocUI(courseInfo, thisPageCourseMeta, otherVersion) {
 	let thisSectionTitle = (courseInfo.sections[section.thisSectionID]||{}).title||'';
 	let otherSectionTitle = (courseInfo.sections[section.otherSectionID]||{}).title||'';
 	t += '<tr>';
-	t += '<td style="max-width: 40em; word-wrap: break-word"';
+	t += '<td';
 	if (section.thisSectionID) {
 	    t += ' id="this-page-'+section.thisSectionID+'"';
 	}
+	t += ' class="toc-this-page ';
 	if (thisPageCourseMeta.pageID == section.thisSectionID) {
-	    t += ' class="toc-current-page"';
+	    t += 'toc-current-page"';
 	}
-	t +='>'+thisSectionTitle+'</td>';
+	t +='">'+thisSectionTitle+'</td>';
 	t += '<td></td>';
-	t += '<td style="max-width: 40em; word-wrap: break-word"';
+	t += '<td class="toc-other-page"';
 	if (section.otherSectionID) {
 	    t += ' id="other-page-'+section.otherSectionID+'"';
 	}
