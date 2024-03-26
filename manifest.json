@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "daisystant",
+    "version": "1.0",
+    "description": "Diff between Aisystant course versions",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["bg.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://aisystant.system-school.ru/*"],
+            "css": ["cs.css"],
+            "js": ["htmldiff.min.js","cs.js"]
+        }
+    ]
+}

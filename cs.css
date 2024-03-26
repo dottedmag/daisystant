@@ -1,0 +1,97 @@
+#toc-open {
+  display: none;
+
+  /* Bottom right corner */
+  position: fixed;
+  bottom: 0;
+  right:0;
+
+  /* Visuals */
+  width: 2rem;
+  cursor: pointer;
+
+  /* Aisystant uses z-index of 1000 for its sidebar */
+  z-index: 10000;
+}
+#toc-open.open {
+  display: block;
+}
+
+#toc-close {
+  /* Put it next to the ToC view */
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, -100%);
+
+  /* Visuals */
+  width: 2rem;
+  cursor: pointer;
+
+  /* Aisystant uses z-index of 1000 for its sidebar */
+  z-index: 10000;
+}
+
+#toc {
+  display: none;
+
+  /* Bottom right corner */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  /* Aisystant uses z-index of 1000 for its sidebar */
+  z-index: 10000;
+
+  background: #dddddd;
+  padding: 3px;
+}
+#toc.open {
+  display: block;
+}
+
+#diff {
+  display: none;
+
+  /* Whole window with a decorative transparent border */
+  position: fixed;
+  inset: 0.001rem;
+
+  /* Above even the ToC */
+  z-index: 10001;
+
+  background: white;
+
+  overflow-y: auto;
+}
+#diff.open {
+  display: block;
+}
+
+#diff-close {
+  /* Put it next to the diff view */
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  /* Visuals */
+  width: 2rem;
+  cursor: pointer;
+
+  /* Above even the ToC */
+  z-index: 10001;
+}
+
+.toc-current-page {
+    background-color: #ccc;
+}
+
+del {
+    background-color: red;
+    color: white;
+}
+
+ins {
+    background-color: green;
+    color: white;
+}
