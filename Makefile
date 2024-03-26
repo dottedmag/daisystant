@@ -6,3 +6,6 @@ htmldiff.min.js:
 	(echo "var module = {exports: {}};" && wget -O- $(HTMLDIFF) && echo && echo "global.HtmlDiff = module.exports['default'];") > htmldiff.min.js
 
 .PHONY: htmldiff.min.js
+
+clean:
+	rm -rf web-ext-artifacts
