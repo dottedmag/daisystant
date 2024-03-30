@@ -1,3 +1,5 @@
+.PHONY: dist
+
 build: gen
 	web-ext build
 
@@ -11,5 +13,14 @@ htmldiff.min.js:
 clean:
 	rm -rf web-ext-artifacts
 
-deploy:
+deploy: dist
 	rsync -ar --progress --delete dist/ tea:/srv/www/daisystant
+
+dist:
+	rm -rf dist
+	mkdir -p dist
+	tailwind -c web/tailwind.config.js -i web/main.css.in -o dist/main.css
+	cp web/index.html web/updates.json web/*.xpi dist
+
+watch:
+	tailwind -c web/tailwind.config.js -i web/main.css.in -o web/main.css --watch

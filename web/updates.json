@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "{020b0041-be7e-4105-88d6-1e0e64485142}": {
+      "updates": [
+        {
+          "version": "1.0.2",
+          "update_link": "https://dottedmag.net/daisystant/daisystant-1.0.2.xpi",
+          "update_hash": "sha256:921e3a06ce5f9fa0bcc980d3e5a1f9a6d35a77cf9061be44ff08134cb4b9493e"
+        }
+      ]
+    }
+  }
+}
