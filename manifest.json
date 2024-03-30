@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "daisystant",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Diff between Aisystant course versions",
     "permissions": [
         "activeTab",
@@ -16,5 +16,10 @@
             "css": ["cs.css"],
             "js": ["htmldiff.min.js","cs.js"]
         }
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "update_url": "https://dottedmag.net/daisystant/updates.json"
+        }
+    }
 }
