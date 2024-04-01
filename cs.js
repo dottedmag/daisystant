@@ -264,13 +264,22 @@ function closeDiff() {
 
 async function openToc() {
     let pu = parseCoursePageURL();
-    let ci = await getCourseInfo(pu);
-    let v = await getOtherVersion(ci, pu);
-    populateTocUI(ci, pu, v);
-    populateVersionsUI(ci, pu.version, v);
 
+    if (!pu) {
+	text = "Not a course page: navigate to course page and open again.";
+    } else {
+	text = "Loading...";
+    }
+    uiTocTable.innerHTML = `<div style="display: flex; justify-content: center; align-items: center; height: 10em">`+text+`</div>`;
     uiTocOpen.classList.remove('open');
     uiToc.classList.add('open');
+
+    if (pu) {
+	let ci = await getCourseInfo(pu);
+	let v = await getOtherVersion(ci, pu);
+	populateTocUI(ci, pu, v);
+	populateVersionsUI(ci, pu.version, v);
+    }
 }
 
 async function selectOtherVersion(e) {
