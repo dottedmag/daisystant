@@ -1,10 +1,10 @@
 #toc-open {
   display: none;
 
-  /* Bottom right corner */
+  /* Bottom left corner */
   position: fixed;
   bottom: 0;
-  right:0;
+  left: 0;
 
   /* Visuals */
   width: 2rem;
@@ -35,10 +35,10 @@
 #toc {
   display: none;
 
-  /* Bottom right corner */
+  /* Bottom left corner */
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
 
   /* Aisystant uses z-index of 1000 for its sidebar */
   z-index: 10000;

@@ -197,9 +197,9 @@ let uiDiffContent;
 function constructUI() {
     /* Heroicons, MIT https://heroicons.com/ */
     uiTocOpen = elem(`<div id="toc-open" class="open">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-    <path fill-rule="evenodd" d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
-    <path fill-rule="evenodd" d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+  <svg width="60px" height="60px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6.975" y="3" width="18.05" height="6.017" style="fill:#c00000"/>
+    <path d="M12.992,10.95v6.017H6.975v6.017h6.017V29h6.017V22.983h6.017V16.967H19.008V10.95Z" style="fill:green"/>
   </svg>
 </div>`);
     document.body.appendChild(uiTocOpen);
