@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "daisystant",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Diff between Aisystant course versions",
     "permissions": [
         "activeTab",
