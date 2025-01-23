@@ -1,3 +1,7 @@
+# Status
+
+This extension is obsolete, Aisystant has this functionality built-in nowadays.
+
 # Build instructions:
 
 ```
